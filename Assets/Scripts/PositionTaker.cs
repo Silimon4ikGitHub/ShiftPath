@@ -10,8 +10,9 @@ public class PositionTaker : MonoBehaviour
     [SerializeField] private int t;
     [SerializeField] private float total;
     [SerializeField] private Vector3 psn;
+    public float MyDistanceOnPath;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         pathCreator = GetComponentInParent<PathCreator>();
     }
@@ -20,7 +21,6 @@ public class PositionTaker : MonoBehaviour
     void Update()
     {
         total += t * Time.deltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(total + transform.position.x + transform.position.z);
-        
+        transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
     }
 }

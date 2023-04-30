@@ -1,4 +1,5 @@
 ﻿using PathCreation;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace PathCreation.Examples {
@@ -8,6 +9,8 @@ namespace PathCreation.Examples {
 
         public GameObject prefab;
         public GameObject holder;
+        public GameObject[] objectsOnPath;
+        public int arrayIndex;
         public float spacing = 3;
 
         const float minSpacing = .1f;
@@ -17,14 +20,18 @@ namespace PathCreation.Examples {
                 DestroyObjects ();
 
                 VertexPath path = pathCreator.path;
-
+                
                 spacing = Mathf.Max(minSpacing, spacing);
                 float dst = 0;
-
+                objectsOnPath = new GameObject[100];
+                arrayIndex = 0;
                 while (dst < path.length) {
                     Vector3 point = path.GetPointAtDistance (dst);
                     Quaternion rot = path.GetRotationAtDistance (dst);
-                    Instantiate (prefab, point, rot, holder.transform);
+                    objectsOnPath[arrayIndex] = Instantiate (prefab, point, rot, holder.transform);
+                    //objectsOnPath[arrayIndex].GetComponent<PositionTaker>().MyDistanceOnPath = dst;
+                    
+                    arrayIndex++;
                     dst += spacing;
                 }
             }

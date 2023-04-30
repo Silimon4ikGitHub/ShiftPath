@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5462245613909631573}
   - component: {fileID: 5462245613909631572}
   - component: {fileID: 5462245613909631578}
+  - component: {fileID: -8031108518891354726}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -101,3 +102,17 @@ MonoBehaviour:
   t: 1
   total: 0
   psn: {x: 0, y: 0, z: 0}
+  MyDistanceOnPath: 0
+--- !u!135 &-8031108518891354726
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462245613909631576}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Center: {x: 0, y: 0, z: 0}
