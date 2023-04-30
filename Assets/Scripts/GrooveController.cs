@@ -3,22 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallController : MonoBehaviour
+public class GrooveController : MonoBehaviour
 {
     [SerializeField] private PathPlacer pathPlacer;
-    public GameObject[] Balls;
+    public GameObject[] Grooves;
 
     void Start()
     {
-        Balls = new GameObject[pathPlacer.ballsOnPath.Length];
+        Grooves = new GameObject[pathPlacer.groovesOnPath.Length];
         BallsArrayFiller();
     }
 
     private void BallsArrayFiller()
     {
-        for (int i = 0; i < Balls.Length; i++) 
+        for (int i = 0; i < Grooves.Length; i++)
         {
-                Balls[i] = pathPlacer.ballsOnPath[i];
+            Grooves[i] = pathPlacer.groovesOnPath[i];
         }
     }
 }

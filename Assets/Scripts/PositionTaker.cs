@@ -6,21 +6,77 @@ using UnityEngine;
 public class PositionTaker : MonoBehaviour
 {
     [SerializeField] private PathCreator pathCreator;
+    [SerializeField] private BallController ballController;
+    [SerializeField] private GrooveController grooveController;
+    [SerializeField] private GameObject nearestGrove;
+    [SerializeField] private Transform myGroove;
     [SerializeField] private Vector3 position;
-    [SerializeField] private int t;
+    [SerializeField] private int speed;
+    [SerializeField] private float shiftSpeed;
     [SerializeField] private float total;
+    [SerializeField] private float closestDistance;
+    [SerializeField] private float refresh = 100;
     [SerializeField] private Vector3 psn;
     public float MyDistanceOnPath;
     // Start is called before the first frame update
     void Awake()
     {
         pathCreator = GetComponentInParent<PathCreator>();
+        ballController = GetComponentInParent<BallController>();
+        grooveController = GetComponentInParent<GrooveController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        total += t * Time.deltaTime;
+        MoveBalls();
+        BallControl();
+        SearchMyGroove();
+        ShiftinGroove();
+    }
+
+    private void MoveBalls()
+    {
+        total += speed * Time.deltaTime;
         transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
+    }
+
+    private void ShiftinGroove()
+    {
+        if (speed == 0)
+        for (int i = 0; i < grooveController.Grooves.Length; i++)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, nearestGrove.transform.position, shiftSpeed);
+        }
+    }
+
+    private void SearchMyGroove()
+    {
+        for (int i = 0; i < grooveController.Grooves.Length; i++)
+        {
+            
+            if (grooveController.Grooves[i] != null)
+            {
+                float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    nearestGrove = grooveController.Grooves[i];
+                }
+            }
+        }
+    }
+
+    private void BallControl()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            speed = 1;
+            closestDistance = refresh;
+        }
+        else
+        {
+            speed = 0;
+        }
     }
 }
