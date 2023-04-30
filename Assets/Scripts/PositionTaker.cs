@@ -12,6 +12,7 @@ public class PositionTaker : MonoBehaviour
     [SerializeField] private Transform myGroove;
     [SerializeField] private Vector3 position;
     [SerializeField] private int speed;
+    [SerializeField] private int currentSpeed;
     [SerializeField] private float shiftSpeed;
     [SerializeField] private float total;
     [SerializeField] private float closestDistance;
@@ -37,13 +38,13 @@ public class PositionTaker : MonoBehaviour
 
     private void MoveBalls()
     {
-        total += speed * Time.deltaTime;
+        total += currentSpeed * Time.deltaTime;
         transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
     }
 
     private void ShiftinGroove()
     {
-        if (speed == 0)
+        if (currentSpeed == 0)
         for (int i = 0; i < grooveController.Grooves.Length; i++)
         {
             transform.position = Vector3.MoveTowards(transform.position, nearestGrove.transform.position, shiftSpeed);
@@ -71,12 +72,12 @@ public class PositionTaker : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            speed = 1;
+            currentSpeed = speed;
             closestDistance = refresh;
         }
         else
         {
-            speed = 0;
+            currentSpeed = 0;
         }
     }
 }
