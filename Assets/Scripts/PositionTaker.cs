@@ -63,6 +63,7 @@ public class PositionTaker : MonoBehaviour
                 {
                     closestDistance = distance;
                     nearestGrove = grooveController.Grooves[i];
+                    ballController.Balls[i] = transform.gameObject;
                 }
             }
         }

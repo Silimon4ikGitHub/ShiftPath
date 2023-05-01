@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5462245613909631573}
   - component: {fileID: 5462245613909631572}
   - component: {fileID: 5462245613909631578}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Red Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

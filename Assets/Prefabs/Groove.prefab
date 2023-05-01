@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3295512919305146535}
   - component: {fileID: 3363515718702359396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Groove
-  m_TagString: Untagged
+  m_TagString: Groove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
