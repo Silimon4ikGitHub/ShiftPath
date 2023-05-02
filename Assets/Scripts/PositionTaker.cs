@@ -1,4 +1,5 @@
 using PathCreation;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,11 +24,8 @@ public class PositionTaker : MonoBehaviour
     void Awake()
     {
         GetParentComponents();
-        //grooveController = GetComponentInParent<GrooveController>();
-        //ballController = GetComponentInParent<BallController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         MoveBalls();
@@ -65,9 +63,11 @@ public class PositionTaker : MonoBehaviour
                 {
                     closestDistance = distance;
                     nearestGrove = grooveController.Grooves[i];
-                    ballController.Balls[i] = transform.gameObject;
+                        //ballController.Balls[i] = Array.IndexOf(grooveController.Grooves, nearestGrove);
+                    //ballController.Balls[i] = transform.gameObject;
                 }
             }
+                MakeEqualArrayIndex();
         }
     }
 
@@ -89,5 +89,10 @@ public class PositionTaker : MonoBehaviour
         pathCreator = GetComponentInParent<PathCreator>();
         ballController = GetComponentInParent<BallController>();
         grooveController = GetComponentInParent<GrooveController>();
+    }
+
+    private void MakeEqualArrayIndex()
+    {
+        ballController.Balls[Array.IndexOf(grooveController.Grooves, nearestGrove)] = transform.gameObject;
     }
 }
