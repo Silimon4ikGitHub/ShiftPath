@@ -104,7 +104,7 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
-  shiftSpeed: 0.01
+  shiftSpeed: 0.1
   total: 0
   closestDistance: 100000
   refresh: 100

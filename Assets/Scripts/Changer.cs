@@ -12,8 +12,11 @@ public class Changer : MonoBehaviour
     [SerializeField] private GameObject[] ballsOneSide;
     [SerializeField] private GameObject[] ballsOtherSide;
     [SerializeField] private GameObject[] pathes;
+    [SerializeField] private BallController _oneSidePath;
+    [SerializeField] private BallController _otherSidePath;
     [SerializeField] private int[] groovePoints;
     [SerializeField] private float radius;
+    [SerializeField] private bool isOneSide;
     void Start()
     {
         SelectObjects();
@@ -56,16 +59,46 @@ public class Changer : MonoBehaviour
             }
         }
         TakeGroovesPoint();
+        DivideGrooves();
+        ChangeBalls();
     }
 
     private void ChangeBalls()
     {
+        _oneSidePath = ballsOneSide[0].GetComponentInParent<BallController>();
+        _otherSidePath = ballsOtherSide[0].GetComponentInParent<BallController>();
+        GameObject saver;
+        _oneSidePath.Balls[groovePoints[0]].transform.SetParent(_otherSidePath.transform);
+        saver = _oneSidePath.Balls[groovePoints[0]];
+        _oneSidePath.Balls[groovePoints[0]] = _otherSidePath.Balls[groovePoints[2]];
+        _oneSidePath.Balls[groovePoints[0]].GetComponent<PositionTaker>().total = _otherSidePath.Balls[groovePoints[2]].GetComponent<PositionTaker>().total;
+        _oneSidePath.Balls[groovePoints[0]].GetComponent<PositionTaker>().GetParentComponents();
 
+        _otherSidePath.Balls[groovePoints[2]].transform.SetParent(_oneSidePath.transform);
+        _otherSidePath.Balls[groovePoints[2]] = saver;
+        _otherSidePath.Balls[groovePoints[2]].GetComponent<PositionTaker>().total = _oneSidePath.Balls[groovePoints[2]].GetComponent<PositionTaker>().total;
+        _otherSidePath.Balls[groovePoints[2]].GetComponent<PositionTaker>().GetParentComponents();
+
+        /*
+
+        _otherSidePath.Balls[groovePoints[3]].transform.SetParent(_oneSidePath.transform);
+        _otherSidePath.Balls[groovePoints[3]] = saver;
+        _otherSidePath.Balls[groovePoints[3]].GetComponent<PositionTaker>().total = saver.GetComponent<PositionTaker>().total;
+        _otherSidePath.Balls[groovePoints[3]].GetComponent<PositionTaker>().GetParentComponents();
+
+
+        _oneSidePath.Balls[groovePoints[1]].transform.SetParent(_otherSidePath.transform);
+        saver = _oneSidePath.Balls[groovePoints[1]];
+        _oneSidePath.Balls[groovePoints[1]] = _otherSidePath.Balls[groovePoints[3]];
+        //_oneSidePath.Balls[groovePoints[1]].GetComponent<PositionTaker>().total = saver.GetComponent<PositionTaker>().total;
+        _oneSidePath.Balls[groovePoints[1]].GetComponent<PositionTaker>().GetParentComponents();
+        
+        */
+        _otherSidePath.Balls[groovePoints[2]].GetComponent<PositionTaker>().GetParentComponents();
     }
 
     private void TakeGroovesPoint()
     {
-        int _groovePointsCounter = 0;
         for (int i = 0; i < grooves.Length; i++)
         {
             if (grooves[i] != null)
@@ -76,11 +109,11 @@ public class Changer : MonoBehaviour
     }
     private void DivideGrooves()
     {
-        for(int i = 0; i < groovePoints.Length; i++)
-        {
-            //if (groovePoints[i] )
-        }
-        
+        ballsOneSide = new GameObject[2];
+        ballsOtherSide = new GameObject[2];
+        ballsOneSide[0] = grooves[0];
+        ballsOneSide[1] = grooves[1];
+        ballsOtherSide[0] = grooves[2];
+        ballsOtherSide[1] = grooves[3];
     }
-
 }

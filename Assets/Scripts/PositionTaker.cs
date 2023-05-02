@@ -14,7 +14,7 @@ public class PositionTaker : MonoBehaviour
     [SerializeField] private int speed;
     [SerializeField] private int currentSpeed;
     [SerializeField] private float shiftSpeed;
-    [SerializeField] private float total;
+    public float total;
     [SerializeField] private float closestDistance;
     [SerializeField] private float refresh = 100;
     [SerializeField] private Vector3 psn;
@@ -22,9 +22,9 @@ public class PositionTaker : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        pathCreator = GetComponentInParent<PathCreator>();
-        ballController = GetComponentInParent<BallController>();
-        grooveController = GetComponentInParent<GrooveController>();
+        GetParentComponents();
+        //grooveController = GetComponentInParent<GrooveController>();
+        //ballController = GetComponentInParent<BallController>();
     }
 
     // Update is called once per frame
@@ -34,6 +34,7 @@ public class PositionTaker : MonoBehaviour
         BallControl();
         SearchMyGroove();
         ShiftinGroove();
+
     }
 
     private void MoveBalls()
@@ -53,7 +54,8 @@ public class PositionTaker : MonoBehaviour
 
     private void SearchMyGroove()
     {
-        for (int i = 0; i < grooveController.Grooves.Length; i++)
+        if (currentSpeed == 0)
+            for (int i = 0; i < grooveController.Grooves.Length; i++)
         {
             
             if (grooveController.Grooves[i] != null)
@@ -80,5 +82,12 @@ public class PositionTaker : MonoBehaviour
         {
             currentSpeed = 0;
         }
+    }
+
+    public void GetParentComponents()
+    {
+        pathCreator = GetComponentInParent<PathCreator>();
+        ballController = GetComponentInParent<BallController>();
+        grooveController = GetComponentInParent<GrooveController>();
     }
 }
