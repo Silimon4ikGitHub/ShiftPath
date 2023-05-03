@@ -442,16 +442,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 5
   isMakeSlowMove: 0
 --- !u!23 &226954776
@@ -553,16 +553,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 6
   isMakeSlowMove: 0
 --- !u!23 &232670142
@@ -709,16 +709,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 3.5
   isMakeSlowMove: 0
 --- !u!23 &383387310
@@ -820,16 +820,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 1
   isMakeSlowMove: 0
 --- !u!23 &385558008
@@ -1066,16 +1066,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 1
   isMakeSlowMove: 0
 --- !u!23 &430669498
@@ -1177,16 +1177,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 5.5
   isMakeSlowMove: 0
 --- !u!23 &436389088
@@ -1333,16 +1333,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 2.5
   isMakeSlowMove: 0
 --- !u!23 &572634297
@@ -1444,16 +1444,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 3
   isMakeSlowMove: 0
 --- !u!23 &588793286
@@ -1555,16 +1555,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 0
   isMakeSlowMove: 0
 --- !u!23 &658196832
@@ -1805,16 +1805,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 6
   isMakeSlowMove: 0
 --- !u!23 &722091312
@@ -2006,16 +2006,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 4.5
   isMakeSlowMove: 0
 --- !u!23 &771314541
@@ -2176,16 +2176,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 0.5
   isMakeSlowMove: 0
 --- !u!23 &874352182
@@ -2298,7 +2298,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 945144778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: da0903b8e0f23474188f03064e045705, type: 2}
   m_CullingMode: 0
@@ -2377,16 +2377,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 4.5
   isMakeSlowMove: 0
 --- !u!23 &951707472
@@ -2572,16 +2572,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 0.5
   isMakeSlowMove: 0
 --- !u!23 &969975707
@@ -2683,16 +2683,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 2
   isMakeSlowMove: 0
 --- !u!23 &1045801996
@@ -2929,16 +2929,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 4
   isMakeSlowMove: 0
 --- !u!23 &1117799973
@@ -3040,16 +3040,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 2.5
   isMakeSlowMove: 0
 --- !u!23 &1142763724
@@ -3179,16 +3179,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 5
   isMakeSlowMove: 0
 --- !u!23 &1188799414
@@ -3335,16 +3335,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 3.5
   isMakeSlowMove: 0
 --- !u!23 &1309165194
@@ -3491,16 +3491,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 4
   isMakeSlowMove: 0
 --- !u!23 &1388650232
@@ -3647,16 +3647,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 3
   isMakeSlowMove: 0
 --- !u!23 &1440064209
@@ -3803,16 +3803,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 0
   isMakeSlowMove: 0
 --- !u!23 &1484598134
@@ -4029,16 +4029,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 2
   isMakeSlowMove: 0
 --- !u!23 &1659922313
@@ -4140,16 +4140,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 5.5
   isMakeSlowMove: 0
 --- !u!23 &1767223762
@@ -4296,16 +4296,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.1
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 1.5
   isMakeSlowMove: 0
 --- !u!23 &1849702692
@@ -4452,16 +4452,16 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   ballController: {fileID: 0}
   grooveController: {fileID: 0}
-  NearestGrove: {fileID: 0}
   myGroove: {fileID: 0}
+  psn: {x: 0, y: 0, z: 0}
   position: {x: 0, y: 0, z: 0}
   speed: 2
   currentSpeed: 0
   shiftSpeed: 0.01
-  total: 0
   closestDistance: 100000
   refresh: 100
-  psn: {x: 0, y: 0, z: 0}
+  NearestGrove: {fileID: 0}
+  total: 0
   MyDistanceOnPath: 1.5
   isMakeSlowMove: 0
 --- !u!23 &2029783609
@@ -4875,7 +4875,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 69
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1

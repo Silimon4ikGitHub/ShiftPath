@@ -9,18 +9,19 @@ public class PositionTaker : MonoBehaviour
     [SerializeField] private PathCreator pathCreator;
     [SerializeField] private BallController ballController;
     [SerializeField] private GrooveController grooveController;
-    public GameObject NearestGrove;
     [SerializeField] private Transform myGroove;
+    [SerializeField] private Vector3 psn;
     [SerializeField] private Vector3 position;
     [SerializeField] private float speed;
     [SerializeField] private float currentSpeed;
     [SerializeField] private float shiftSpeed;
-    public float total;
     [SerializeField] private float closestDistance;
     [SerializeField] private float refresh = 100;
-    [SerializeField] private Vector3 psn;
+    public GameObject NearestGrove;
+    public float total;
     public float MyDistanceOnPath;
     public bool isMakeSlowMove;
+    private GameObject _myGroove;
     void Awake()
     {
         GetParentComponents();
@@ -29,14 +30,13 @@ public class PositionTaker : MonoBehaviour
     void Update()
     {
         MoveBalls();
-        BallControl();
+        MoveBallBySpase();
         SearchMyGroove();
         ShiftinGroove();
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             MakeEqualArrayIndex();
-            SearchMyGroove();
         }
 
         if (currentSpeed == 0)
@@ -46,9 +46,9 @@ public class PositionTaker : MonoBehaviour
     }
 
     private void MoveBalls()
-    {
-        total += currentSpeed * Time.deltaTime;
-        transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
+    {   
+            total += currentSpeed * Time.deltaTime;
+            transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
     }
 
     private void ShiftinGroove()
@@ -64,21 +64,21 @@ public class PositionTaker : MonoBehaviour
     {
         if (currentSpeed == 0)
             for (int i = 0; i < grooveController.Grooves.Length; i++)
-        {
-            if (grooveController.Grooves[i] != null)
             {
-                float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
-                if (distance < closestDistance)
+            if (grooveController.Grooves[i] != null)
                 {
-                    closestDistance = distance;
-                    NearestGrove = grooveController.Grooves[i];
-                }
+                    float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        _myGroove = grooveController.Grooves[i];
+                    }
+                }  
             }
-                
-        }
+        NearestGrove = _myGroove;
     }
 
-    private void BallControl()
+    private void MoveBallBySpase()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -102,5 +102,4 @@ public class PositionTaker : MonoBehaviour
     {
         ballController.Balls[Array.IndexOf(grooveController.Grooves, NearestGrove)] = transform.gameObject;
     }
-
 }
