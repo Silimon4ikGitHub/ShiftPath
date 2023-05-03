@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class NewChanger : MonoBehaviour
 {
-    [SerializeField] private GameObject RightPosition;
-    [SerializeField] private GameObject LeftPosition;
-    [SerializeField] private GameObject oneBall;
-    [SerializeField] private GameObject otherBall;
+    public GameObject oneBall;
+    public GameObject otherBall;
     [SerializeField] private Collider[] colliders;
     [SerializeField] private BallController ballcontroller;
     [SerializeField] private int[] groovesIndexes;
@@ -25,11 +23,6 @@ public class NewChanger : MonoBehaviour
             TakeGrooveIndex();
             ChangeBalls();
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        //Gizmos.DrawSphere(transform.position, radius);
     }
 
     private void TakeGrooveIndex()
@@ -54,8 +47,6 @@ public class NewChanger : MonoBehaviour
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().transform.SetParent(colliders[1].GetComponentInParent<BallController>().transform);
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().transform.SetParent(saveParentTransform);
 
-
-
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().GetParentComponents();
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().GetParentComponents();
 
@@ -70,9 +61,9 @@ public class NewChanger : MonoBehaviour
 
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].transform.position = otherBall.transform.position;
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].transform.position = saveTransform.position;
-
-        //colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().MakeSlowMove();
-        //colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().MakeSlowMove();
-
+    }
+    private void OnDrawGizmos()
+    {
+        //Gizmos.DrawSphere(transform.position, radius);
     }
 }

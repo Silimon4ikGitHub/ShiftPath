@@ -453,6 +453,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 5
+  isMakeSlowMove: 0
 --- !u!23 &226954776
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -563,6 +564,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 6
+  isMakeSlowMove: 0
 --- !u!23 &232670142
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -658,37 +660,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &370596184
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 370596185}
-  m_Layer: 0
-  m_Name: RightSide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &370596185
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370596184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 945144780}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &383387307
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +720,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 3.5
+  isMakeSlowMove: 0
 --- !u!23 &383387310
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -859,6 +831,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 1
+  isMakeSlowMove: 0
 --- !u!23 &385558008
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1104,6 +1077,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 1
+  isMakeSlowMove: 0
 --- !u!23 &430669498
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1214,6 +1188,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 5.5
+  isMakeSlowMove: 0
 --- !u!23 &436389088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1309,37 +1284,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &507745300
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 507745301}
-  m_Layer: 0
-  m_Name: LeftSide
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &507745301
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507745300}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 945144780}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572634294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1344,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 2.5
+  isMakeSlowMove: 0
 --- !u!23 &572634297
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1510,6 +1455,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 3
+  isMakeSlowMove: 0
 --- !u!23 &588793286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1620,6 +1566,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 0
+  isMakeSlowMove: 0
 --- !u!23 &658196832
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1869,6 +1816,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 6
+  isMakeSlowMove: 0
 --- !u!23 &722091312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2069,6 +2017,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 4.5
+  isMakeSlowMove: 0
 --- !u!23 &771314541
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2238,6 +2187,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 0.5
+  isMakeSlowMove: 0
 --- !u!23 &874352182
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2298,6 +2248,8 @@ GameObject:
   m_Component:
   - component: {fileID: 945144780}
   - component: {fileID: 945144781}
+  - component: {fileID: 945144782}
+  - component: {fileID: 945144783}
   m_Layer: 0
   m_Name: Changer
   m_TagString: Changer
@@ -2316,9 +2268,7 @@ Transform:
   m_LocalPosition: {x: 1.5, y: 0, z: 0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 370596185}
-  - {fileID: 507745301}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2334,12 +2284,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23a579523a84a6d48b715b7e7929a1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightPosition: {fileID: 370596184}
-  LeftPosition: {fileID: 507745300}
+  oneBall: {fileID: 0}
+  otherBall: {fileID: 0}
   colliders: []
   ballcontroller: {fileID: 0}
   groovesIndexes: 
   radius: 0.2
+--- !u!95 &945144782
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945144778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: da0903b8e0f23474188f03064e045705, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &945144783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945144778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948a7fcda77f16f46a14c57e6911fc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  _oneBall: {fileID: 0}
+  _otherBall: {fileID: 0}
+  _oneBallParent: {fileID: 0}
+  _otherBallParent: {fileID: 0}
+  changer: {fileID: 0}
 --- !u!1 &951707469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2400,6 +2388,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 4.5
+  isMakeSlowMove: 0
 --- !u!23 &951707472
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2594,6 +2583,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 0.5
+  isMakeSlowMove: 0
 --- !u!23 &969975707
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2704,6 +2694,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 2
+  isMakeSlowMove: 0
 --- !u!23 &1045801996
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2949,6 +2940,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 4
+  isMakeSlowMove: 0
 --- !u!23 &1117799973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3059,6 +3051,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 2.5
+  isMakeSlowMove: 0
 --- !u!23 &1142763724
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3197,6 +3190,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 5
+  isMakeSlowMove: 0
 --- !u!23 &1188799414
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3352,6 +3346,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 3.5
+  isMakeSlowMove: 0
 --- !u!23 &1309165194
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3507,6 +3502,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 4
+  isMakeSlowMove: 0
 --- !u!23 &1388650232
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3662,6 +3658,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 3
+  isMakeSlowMove: 0
 --- !u!23 &1440064209
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3817,6 +3814,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 0
+  isMakeSlowMove: 0
 --- !u!23 &1484598134
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4042,6 +4040,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 2
+  isMakeSlowMove: 0
 --- !u!23 &1659922313
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4152,6 +4151,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 5.5
+  isMakeSlowMove: 0
 --- !u!23 &1767223762
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4307,6 +4307,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 1.5
+  isMakeSlowMove: 0
 --- !u!23 &1849702692
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4462,6 +4463,7 @@ MonoBehaviour:
   refresh: 100
   psn: {x: 0, y: 0, z: 0}
   MyDistanceOnPath: 1.5
+  isMakeSlowMove: 0
 --- !u!23 &2029783609
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4873,7 +4875,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 69
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1
@@ -4928,7 +4930,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 69
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0
     showTransformTool: 1
