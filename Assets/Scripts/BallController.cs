@@ -6,11 +6,20 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private PathPlacer pathPlacer;
+    [SerializeField] private Transform myPath;
+    [SerializeField] private Transform myCanvas;
+    [SerializeField] private FixedJoystick JoyStick;
+    [SerializeField] private ParentPath parentPath;
     public GameObject[] Balls;
+    public float VerticalInput;
 
+    [System.Obsolete]
     void Start()
     {
         Balls = new GameObject[pathPlacer.ballsOnPath.Length];
+        myPath = GetComponentInParent<ParentPath>().transform;
+        parentPath = myPath.GetComponent<ParentPath>();
+        JoyStick = myPath.GetComponentInChildren<FixedJoystick>();
         BallsArrayFiller();
     }
 
@@ -20,5 +29,18 @@ public class BallController : MonoBehaviour
         {
                 Balls[i] = pathPlacer.ballsOnPath[i];
         }
+    }
+    private void FixedUpdate()
+    {
+        CheckJoyStickInput();
+    }
+
+    private void CheckJoyStickInput()
+    {
+        if (parentPath.IsRightSidePath)
+        VerticalInput = JoyStick.Vertical;
+
+        else if (!parentPath.IsRightSidePath)
+            VerticalInput = -JoyStick.Vertical;
     }
 }

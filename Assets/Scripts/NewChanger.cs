@@ -7,13 +7,16 @@ public class NewChanger : MonoBehaviour
 {
     public GameObject oneBall;
     public GameObject otherBall;
+    public bool IsMouseDown;
     [SerializeField] private Collider[] colliders;
     [SerializeField] private BallController ballcontroller;
+    [SerializeField] private ChangerController changerController;
     [SerializeField] private int[] groovesIndexes;
     [SerializeField] private float radius;
     void Start()
     {
         colliders = Physics.OverlapSphere (transform.position, radius);
+        changerController = GetComponentInParent<ChangerController> ();
     }
 
     void Update()
@@ -35,8 +38,9 @@ public class NewChanger : MonoBehaviour
         }
     }
 
-    private void ChangeBalls()
+    public void ChangeBalls()
     {
+        
         oneBall = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]];
         otherBall = colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]];
         GameObject saveNearestGrove = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().NearestGrove;
