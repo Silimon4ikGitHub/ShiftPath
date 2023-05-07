@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class ChangerController : MonoBehaviour
 {
-    [SerializeField] private NewChanger changer;
+    [SerializeField] private NewChanger[] changers;
     // Start is called before the first frame update
     void Start()
     {
-        changer = GetComponentInChildren<NewChanger>();
+        changers = GetComponentsInChildren<NewChanger>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,11 @@ public class ChangerController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        changer.TakeGrooveIndex();
-        changer.ChangeBalls();
+        foreach(var changer in changers)
+        {
+            changer.TakeGrooveIndex();
+            changer.ChangeBalls();
+        }
+
     }
 }
