@@ -5,5 +5,4 @@ using UnityEngine;
 public class ParentPath : MonoBehaviour
 {
     public bool IsRightSidePath;
-
 }

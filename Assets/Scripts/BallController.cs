@@ -7,7 +7,6 @@ public class BallController : MonoBehaviour
 {
     [SerializeField] private PathPlacer pathPlacer;
     [SerializeField] private Transform myPath;
-    [SerializeField] private Transform myCanvas;
     [SerializeField] private FixedJoystick JoyStick;
     [SerializeField] private ParentPath parentPath;
     public GameObject[] Balls;

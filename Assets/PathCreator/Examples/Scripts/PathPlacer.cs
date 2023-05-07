@@ -34,11 +34,14 @@ namespace PathCreation.Examples {
                 while (dst < path.length) {
                     Vector3 point = path.GetPointAtDistance (dst);
                     Quaternion rot = path.GetRotationAtDistance (dst);
+
                     ballsOnPath[BallArrayIndex] = Instantiate (prefab1, point, rot, holder.transform);
                     ballsOnPath[BallArrayIndex].GetComponent<PositionTaker>().MyDistanceOnPath = dst;
+
                     groovesOnPath[GrooveArrayIndex] = Instantiate(prefab2, point, rot, holder.transform);
                     groovesOnPath[GrooveArrayIndex].GetComponent<Groove>().MyDistanceOnPath = dst;
                     GrooveArrayIndex++;
+
                     BallArrayIndex++;
                     dst += spacing;
                 }

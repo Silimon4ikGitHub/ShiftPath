@@ -20,8 +20,8 @@ public class ChangerAnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _oneBall = changer.oneBall;
-        _otherBall = changer.otherBall;
+        _oneBall = changer.OneBall;
+        _otherBall = changer.OtherBall;
 
         if (Input.GetKeyDown(KeyCode.R))
         {

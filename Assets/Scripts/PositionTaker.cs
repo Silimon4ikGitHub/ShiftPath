@@ -6,24 +6,24 @@ using UnityEngine;
 
 public class PositionTaker : MonoBehaviour
 {
-    [SerializeField] private PathCreator pathCreator;
-    [SerializeField] private BallController ballController;
-    [SerializeField] private GrooveController grooveController;
-    [SerializeField] private FixedJoystick joystick;
-    [SerializeField] private Transform myGroove;
-    [SerializeField] private Vector3 psn;
-    [SerializeField] private Vector3 position;
+    public float Total;
+    public float MyDistanceOnPath;
+    public bool IsChangerInWork;
+    public bool isMakeSlowMove;
+
+    [SerializeField] private int myType;
     [SerializeField] private float speed;
     [SerializeField] private float currentSpeed;
     [SerializeField] private float shiftSpeed;
     [SerializeField] private float closestDistance;
     [SerializeField] private float refresh = 100;
-    public bool IsChangerInWork;
-    public GameObject NearestGrove;
-    public float total;
-    public float MyDistanceOnPath;
-    public bool isMakeSlowMove;
+
     private GameObject _myGroove;
+    public GameObject NearestGrove;
+    private PathCreator _pathCreator;
+    private BallController _ballController;
+    private GrooveController _grooveController;
+
     void Awake()
     {
         GetParentComponents();
@@ -37,22 +37,21 @@ public class PositionTaker : MonoBehaviour
     {
         MoveBalls();
         MoveBallByJoystick();
+
         if (currentSpeed == 0)
         {
             SearchMyGroove();
             ShiftinGroove();
         }
-        
     }
 
     private void MoveBalls()
     {   
         if(currentSpeed != 0)
         {
-            total += currentSpeed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(MyDistanceOnPath + total);
+            Total += currentSpeed * Time.deltaTime;
+            transform.position = _pathCreator.path.GetPointAtDistance(MyDistanceOnPath + Total);
         }
-
     }
 
     private void ShiftinGroove()
@@ -62,28 +61,24 @@ public class PositionTaker : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, NearestGrove.transform.position, shiftSpeed);
             }
-            
     }
 
     public void SearchMyGroove()
     {
         if (closestDistance > 0.01 && currentSpeed == 0)
         {
-            for (int i = 0; i < grooveController.Grooves.Length; i++)
+            for (int i = 0; i < _grooveController.Grooves.Length; i++)
             {
-                if (grooveController.Grooves[i] != null)
+                if (_grooveController.Grooves[i] != null)
                 {
-                    float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
+                    float distance = Vector3.Distance(transform.position, _grooveController.Grooves[i].transform.position);
                     if (distance < closestDistance)
                     {
                         closestDistance = distance;
-                        _myGroove = grooveController.Grooves[i];
-                        //IsChangerInWork = false;
-                        Debug.Log("HereIsWorking");
+                        _myGroove = _grooveController.Grooves[i];
                     }
                 }
             }
-            
             NearestGrove = _myGroove;
             MakeEqualArrayIndex();
         }
@@ -91,12 +86,12 @@ public class PositionTaker : MonoBehaviour
 
     private void MoveBallByJoystick()
     {
-        if (ballController.VerticalInput > 0)
+        if (_ballController.VerticalInput > 0)
         {
             currentSpeed = -speed;
             closestDistance = refresh;
         }
-        else if (ballController.VerticalInput < 0)
+        else if (_ballController.VerticalInput < 0)
         {
             currentSpeed = speed;
             closestDistance = refresh;
@@ -109,14 +104,14 @@ public class PositionTaker : MonoBehaviour
 
     public void GetParentComponents()
     {
-        pathCreator = GetComponentInParent<PathCreator>();
-        ballController = GetComponentInParent<BallController>();
-        grooveController = GetComponentInParent<GrooveController>();
+        _pathCreator = GetComponentInParent<PathCreator>();
+        _ballController = GetComponentInParent<BallController>();
+        _grooveController = GetComponentInParent<GrooveController>();
     }
 
     private void MakeEqualArrayIndex()
     {
         if (NearestGrove != null)
-        ballController.Balls[Array.IndexOf(grooveController.Grooves, NearestGrove)] = transform.gameObject;
+        _ballController.Balls[Array.IndexOf(_grooveController.Grooves, NearestGrove)] = transform.gameObject;
     }
 }
