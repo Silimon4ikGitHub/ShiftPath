@@ -20,6 +20,7 @@ public class ChangerController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        changer.TakeGrooveIndex();
         changer.ChangeBalls();
     }
 }

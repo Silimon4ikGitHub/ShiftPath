@@ -37,6 +37,7 @@ namespace PathCreation.Examples {
                     ballsOnPath[BallArrayIndex] = Instantiate (prefab1, point, rot, holder.transform);
                     ballsOnPath[BallArrayIndex].GetComponent<PositionTaker>().MyDistanceOnPath = dst;
                     groovesOnPath[GrooveArrayIndex] = Instantiate(prefab2, point, rot, holder.transform);
+                    groovesOnPath[GrooveArrayIndex].GetComponent<Groove>().MyDistanceOnPath = dst;
                     GrooveArrayIndex++;
                     BallArrayIndex++;
                     dst += spacing;

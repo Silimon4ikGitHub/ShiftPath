@@ -27,18 +27,22 @@ public class PositionTaker : MonoBehaviour
     void Awake()
     {
         GetParentComponents();
+
         closestDistance = refresh;
+
         SearchMyGroove();
-        //MakeEqualArrayIndex();
     }
 
     void Update()
     {
         MoveBalls();
         MoveBallByJoystick();
-        SearchMyGroove();
-        MakeEqualArrayIndex();
-        ShiftinGroove();
+        if (currentSpeed == 0)
+        {
+            SearchMyGroove();
+            ShiftinGroove();
+        }
+        
     }
 
     private void MoveBalls()
@@ -63,22 +67,26 @@ public class PositionTaker : MonoBehaviour
 
     public void SearchMyGroove()
     {
-        if (!IsChangerInWork)
+        if (closestDistance > 0.01 && currentSpeed == 0)
+        {
             for (int i = 0; i < grooveController.Grooves.Length; i++)
             {
-            if (grooveController.Grooves[i] != null)
+                if (grooveController.Grooves[i] != null)
                 {
-                float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
+                    float distance = Vector3.Distance(transform.position, grooveController.Grooves[i].transform.position);
                     if (distance < closestDistance)
                     {
                         closestDistance = distance;
                         _myGroove = grooveController.Grooves[i];
-                    
+                        //IsChangerInWork = false;
+                        Debug.Log("HereIsWorking");
                     }
-                }  
+                }
             }
-        NearestGrove = _myGroove;
-        
+            
+            NearestGrove = _myGroove;
+            MakeEqualArrayIndex();
+        }
     }
 
     private void MoveBallByJoystick()
@@ -108,7 +116,7 @@ public class PositionTaker : MonoBehaviour
 
     private void MakeEqualArrayIndex()
     {
-        if (NearestGrove == null)
+        if (NearestGrove != null)
         ballController.Balls[Array.IndexOf(grooveController.Grooves, NearestGrove)] = transform.gameObject;
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3295512919305146535}
   - component: {fileID: 3363515718702359396}
+  - component: {fileID: -4850957867349566520}
   m_Layer: 8
   m_Name: Groove
   m_TagString: Groove
@@ -45,3 +46,16 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4850957867349566520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9033941991207181693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a96ef5bc837de43b803f8efb63a233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyDistanceOnPath: 0

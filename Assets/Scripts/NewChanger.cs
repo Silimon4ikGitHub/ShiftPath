@@ -19,16 +19,7 @@ public class NewChanger : MonoBehaviour
         changerController = GetComponentInParent<ChangerController> ();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeGrooveIndex();
-            ChangeBalls();
-        }
-    }
-
-    private void TakeGrooveIndex()
+    public void TakeGrooveIndex()
     {
         groovesIndexes = new int[colliders.Length];
 
@@ -43,10 +34,13 @@ public class NewChanger : MonoBehaviour
         
         oneBall = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]];
         otherBall = colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]];
+
         GameObject saveNearestGrove = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().NearestGrove;
         Transform saveTransform = oneBall.transform;
         Transform saveParentTransform = colliders[0].GetComponentInParent<BallController>().transform;
         float saveMyDistanceOnPath = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().MyDistanceOnPath;
+        float saveTotal = colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().total;
+
 
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().transform.SetParent(colliders[1].GetComponentInParent<BallController>().transform);
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().transform.SetParent(saveParentTransform);
@@ -54,17 +48,19 @@ public class NewChanger : MonoBehaviour
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().GetParentComponents();
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().GetParentComponents();
 
-        colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]] = oneBall;
-        colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]] = otherBall;
-
         colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().NearestGrove = otherBall.GetComponent<PositionTaker>().NearestGrove;
         colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().NearestGrove = saveNearestGrove;
 
-        colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].GetComponent<PositionTaker>().MyDistanceOnPath = otherBall.GetComponent<PositionTaker>().MyDistanceOnPath;
-        colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].GetComponent<PositionTaker>().MyDistanceOnPath = saveMyDistanceOnPath;
 
-        colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]].transform.position = otherBall.transform.position;
-        colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]].transform.position = saveTransform.position;
+        oneBall.GetComponent<PositionTaker>().MyDistanceOnPath = otherBall.GetComponent<PositionTaker>().MyDistanceOnPath;
+        otherBall.GetComponent<PositionTaker>().MyDistanceOnPath = saveMyDistanceOnPath;
+
+        oneBall.GetComponent<PositionTaker>().total = otherBall.GetComponent<PositionTaker>().total;
+        otherBall.GetComponent<PositionTaker>().total = saveTotal;
+
+        colliders[1].GetComponentInParent<BallController>().Balls[groovesIndexes[1]] = oneBall;
+        colliders[0].GetComponentInParent<BallController>().Balls[groovesIndexes[0]] = otherBall;
+
     }
     private void OnDrawGizmos()
     {
