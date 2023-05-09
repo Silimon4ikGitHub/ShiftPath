@@ -103,7 +103,7 @@ MonoBehaviour:
   myType: 2
   speed: 2
   currentSpeed: 0
-  shiftSpeed: 0.1
+  shiftSpeed: 0.01
   closestDistance: 100000
   refresh: 100
   NearestGrove: {fileID: 0}
